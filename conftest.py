@@ -25,7 +25,6 @@ def browser(request):
         browser = webdriver.Safari(options=safari_options)
     else:
         raise pytest.UsageError("--browser_name should be chrome or safari")
-    browser.implicitly_wait(5)
 
     yield browser
     print("\nquit browser..")
