@@ -22,7 +22,7 @@ def browser(request):
     elif browser_name == "safari":
         print("\nstart safari browser for test..")
         safari_options = SafariOptions()
-        # кажется никто не знает как в Safari установить accept_languagesgit
+        # кажется никто не знает как в Safari установить accept_languages
         browser = webdriver.Safari(options=safari_options)
     elif browser_name == "firefox":
         print("\nstart firefox browser for test..")
