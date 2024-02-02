@@ -35,8 +35,8 @@ class ProductPage(BasePage):
             f'Fact product name: {fact_name} is not equal to expected name: {expected_name}. Link: {self.browser.current_url}'
 
     def should_not_be_success_message(self):
-        assert not self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE_AFTER_ADD_TO_BASKET), \
-            f'Success message is not present for a given timeout'
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE_AFTER_ADD_TO_BASKET), \
+            f'Success message is present for a given timeout'
 
     def should_be_success_message_is_disappeared(self):
         assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE_AFTER_ADD_TO_BASKET), \
