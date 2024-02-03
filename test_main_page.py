@@ -8,13 +8,6 @@ from .pages.basket_page import BasketPage
 @pytest.mark.guest
 class TestLoginFromMainPage():
 
-    # @pytest.fixture(scope="function", autouse=True)
-    # def setup(self):
-    #     self.product = ProductFactory(title="Best book created by robot")
-    #     self.link = self.product.link
-    #     yield
-    #     self.product.delete()
-
     def test_guest_should_see_login_link(self, browser):
         link = "http://selenium1py.pythonanywhere.com/"
         page = MainPage(browser, link)
